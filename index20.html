@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTFUT - Tienda de Fútbol</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="icon" type="image/x-icon" href="images/smarty.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="images/smarty.png" alt="Logo SMARTFUT" width="80" height="50">
+                <span class="logo-text">SMARTFUT</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index20.html" class="nav-link active">Tienda</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="carrito.html" class="cart-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18m-11 4v4m4-4v4"/>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <a href="registroSF.html" class="login-btn">Login</a>
+                <button class="mobile-menu-btn" >
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center">
+        <div class="container">
+            <h1>Bienvenido a SMARTFUT</h1>
+            <p>El mejor equipamiento deportivo para tu pasión por el fútbol</p>
+        </div>
+    </header>
+
+    <section class="filters-section">
+        <div class="container filters-card">
+            <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    <input type="text" id="searchInput" placeholder="Buscar productos...">
+</div>
+            <select id="categoryFilter">
+                <option value="Todos">Todas las categorías</option>
+                <option>Balones</option>
+                <option>Calzado</option>
+                <option>Indumentaria</option>
+                <option>Protección</option>
+            </select>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Nuestros Productos</h2>
+            <p id="productsCount">5 productos</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <div class="product-card">
+                <img src="images/balon.jfif" alt="Balón de fútbol">
+                <h3>Balón Profesional 2026</h3>
+                <p class="category">Balones</p>
+                <p class="price">$85.000</p>
+                <button class="add-btn">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/camiseta.jfif" alt="Camiseta de fútbol">
+                <h3>Camiseta Titular</h3>
+                <p class="category">Indumentaria</p>
+                <p class="price">$120.000</p>
+                <button class="add-btn">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/botines.jfif" alt="Botines">
+                <h3>Botines Speed</h3>
+                <p class="category">Calzado</p>
+                <p class="price">$250.000</p>
+                <button class="add-btn">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/guantes.jfif" alt="Guantes">
+                <h3>Guantes de Portero</h3>
+                <p class="category">Protección</p>
+                <p class="price">$150.000</p>
+                <button class="add-btn">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="images/kit.jfif" alt="Kit de entrenamiento">
+                <h3>Kit de Fútbol</h3>
+                <p class="category">Entrenamiento</p>
+                <p class="price">$200.000</p>
+                <button class="add-btn">Comprar</button>
+            </div>
+        </div> </main> <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <div class="footer-column">
+    <a href="index.html" class="logo-footer">
+        <img src="images/smarty.png" alt="Logo SMARTFUT" width="80" height="50">
+        <span class="logo-text">SMARTFUT</span>
+    </a>
+                <p>Tu tienda deportiva de confianza especializada en fútbol. Calidad y pasión en cada producto.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Tienda</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <p>📞 +57 300 123 4567</p>
+                <p>📍 Crr 77A 1-17 Neiva, Huila</p>
+            </div>
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-btn">FB</a>
+                    <a href="#" class="social-btn">IG</a>
+                    <a href="#" class="social-btn">TW</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SMARTFUT. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
