@@ -104,7 +104,7 @@ form .contraseña{
    position: absolute;
    top: 50%;
    left: 5px;
-   color: #000000;
+   color: #030303;
    transform: translateY(-50%);
    font-size: 16px;
    pointer-events: none;
@@ -122,7 +122,7 @@ form .contraseña{
 .contraseña input:focus ~ label,
 .contraseña input:valid ~ label{
    top: -5px;
-   color: #030303;
+   color: #000000;
    font-size: 12px;
 }
 form .registrese {

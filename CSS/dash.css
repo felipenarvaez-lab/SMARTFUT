@@ -11,7 +11,7 @@
 
 .dashboard-container {
     display: flex;
-    min-height: 100vh; /* Ocupa todo el alto de la ventana */
+    min-height: 100vh; 
     background-color: var(--bg-panel);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px 20px;
-    position: sticky; /* Se queda fija al hacer scroll */
+    position: sticky; 
     top: 0;
     height: 100vh;
     box-shadow: 4px 0 15px rgba(0,0,0,0.1);
@@ -87,7 +87,7 @@
 .top-bar {
     background: var(--white);
     padding: 20px 30px;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 15px; 
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     display: flex;
@@ -156,7 +156,7 @@
 .data-table {
     background: var(--white);
     padding: 30px;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 15px; 
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     border: 1px solid #f0f0f0;
 }
@@ -207,28 +207,5 @@ table tbody td:first-child {
 }
 
 
-.status {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: inline-block;
-}
 
-
-.status.enviado {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.status.pendiente {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.status.cancelado {
-    background-color: #f8d7da;
-    color: #721c24;
-}
 
