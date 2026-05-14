@@ -1,59 +1,67 @@
-<main class="dashboard-container">
-    <aside class="sidebar">
-    <link rel="stylesheet" href="CSS/dash.css"> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SMARTFUT</title>
+    <link rel="stylesheet" href="CSS/dash.css">
     <link rel="icon" type="image/x-icon" href="images/smarty.png">
-    <link rel="shortcut icon" type="image/x-icon" href="images/smarty.png">
-    <link>    
-        <nav>
-            <a href="index20.html">Volver a la Tienda</a>
-            <a href="#">Productos</a>
-            <a href="#">Usuarios</a>
-        </nav>
-    </aside>
+</head>
+<body>
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="usuario.html">Usuarios</a>
+                <a href="index.html">Volver a la Tienda</a>
+            </nav>
+        </aside>
 
-    <section class="content">
-        <header class="top-bar">
-            <h2>Panel de Administración - SMARTFUT</h2>
-        </header>
-        <div class="footer-column">
-    <a href="index20.html" class="logo">
-        <img src="images/smarty.png" alt="SMARTFUT" width="100" height="60">
-        <span class="logo-text"></span>
-    </a>
-    
-    <p>Tu tienda deportiva de confianza en Neiva.</p>
-</div>    
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3>Ventas Hoy</h3>
-                <p>$1.250.000</p>
-            </div>
-            <div class="stat-card">
-                <h3>Pedidos Pendientes</h3>
-                <p>12</p>
-            </div>
-            <div class="stat-card">
-                <h3>Stock Bajo</h3>
-                <p>5 productos</p>
-            </div>
-        </div>
+        <section class="content">
+            <header class="top-bar">
+                <h2>Panel de Administración - SMARTFUT</h2>
+                <div>
+                    <strong id="sessionUser">Usuario</strong>
+                    <button id="logoutBtn" class="btn-add" style="margin-left: 12px;">Cerrar sesión</button>
+                </div>
+            </header>
 
-        <div class="data-table">
-            <h3>Últimos Pedidos</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Cliente</th>
-                        <th>Producto</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="ordersTable">
-                    </tbody>
-            </table>
-        </div>
-    </section>
-</main>
-<script src="script/app.js"></script>
+            <p id="dashboardError" style="color:#b00020; margin: 0 0 20px;"></p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Productos</h3>
+                    <p id="totalProductos">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Usuarios</h3>
+                    <p id="totalUsuarios">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Unidades en Stock</h3>
+                    <p id="totalStock">0</p>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <h3>Productos Recientes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="script/pages/dashboard.js"></script>
+</body>
+</html>

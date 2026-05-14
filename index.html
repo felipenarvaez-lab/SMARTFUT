@@ -10,12 +10,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index20.html" class="logo">
+        <a href="index.html" class="logo">
             <img src="images/smarty.png" alt="Logo SMARTFUT" width="80" height="50">
             <span class="logo-text">SMARTFUT</span>
         </a>
         <div class="nav-links" id="navLinks">
-            <a href="index20.html" class="nav-link active">Tienda</a>
+            <a href="index.html" class="nav-link active">Tienda</a>
             <a href="dashboard.html" class="nav-link">Dashboard</a>
         </div>
         <a href="registroSF.html" class="login-btn">Login</a>
@@ -47,54 +47,15 @@
     <main class="container">
         <div class="section-header">
             <h2>Nuestros Productos</h2>
-            <p id="productsCount">5 productos</p>
+            <p id="productsCount">0 productos</p>
         </div>
 
-        <div class="products-grid" id="productsGrid">
-            <div class="product-card">
-                <img src="images/balon.jfif" alt="Balón de fútbol">
-                <h3>Balón Profesional 2026</h3>
-                <p class="category">Balones</p>
-                <p class="price">$85.000</p>
-                <button class="add-btn">Comprar</button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/camiseta.jfif" alt="Camiseta de fútbol">
-                <h3>Camiseta Titular</h3>
-                <p class="category">Indumentaria</p>
-                <p class="price">$120.000</p>
-                <button class="add-btn">Comprar</button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/botines.jfif" alt="Botines">
-                <h3>Botines Speed</h3>
-                <p class="category">Calzado</p>
-                <p class="price">$250.000</p>
-                <button class="add-btn">Comprar</button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/guantes.jfif" alt="Guantes">
-                <h3>Guantes de Portero</h3>
-                <p class="category">Protección</p>
-                <p class="price">$150.000</p>
-                <button class="add-btn">Comprar</button>
-            </div>
-
-            <div class="product-card">
-                <img src="images/kit.jfif" alt="Kit de entrenamiento">
-                <h3>Kit de Fútbol</h3>
-                <p class="category">Entrenamiento</p>
-                <p class="price">$200.000</p>
-                <button class="add-btn">Comprar</button>
-            </div>
-        </div> </main> <footer class="footer">
+        <div class="products-grid" id="productsGrid"></div>
+    </main> <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-column">
                 <div class="footer-column">
-    <a href="index20.html" class="logo-footer">
+    <a href="index.html" class="logo-footer">
         <img src="images/smarty.png" alt="Logo SMARTFUT" width="80" height="50">
         <span class="logo-text">SMARTFUT</span>
     </a>
@@ -103,7 +64,7 @@
             <div class="footer-column">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="index20.html">Tienda</a></li>
+                    <li><a href="index.html">Tienda</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
                 </ul>
             </div>
@@ -125,6 +86,6 @@
             <p>&copy; 2026 SMARTFUT. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="script/app.js"></script>
+    <script type="module" src="script/pages/tienda.js"></script>
 </body>
 </html>

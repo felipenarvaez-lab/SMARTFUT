@@ -1,0 +1,292 @@
+:root {
+    --sidebar-width: 260px;
+    --bg-panel: #f4f7f6; 
+    --primary-dark: #000000; 
+    --accent-blue: #032841; 
+    --white: #ffffff;
+    --text-main: #333;
+    --text-muted: #7f8c8d;
+    --success: #2e7d32;
+    --danger: #c62828;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-panel);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-dark);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar::before {
+    content: "SMARTFUT ADMIN";
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 10px; 
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar nav a:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+.sidebar nav a.active {
+    background-color: var(--accent-blue);
+    box-shadow: 0 4px 10px rgba(3, 40, 65, 0.3);
+}
+
+/* Main Content Area */
+.content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 15px; 
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar h2 {
+    margin: 0;
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn-add {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-add:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+/* Data Table */
+.data-table {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+}
+
+.data-table h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table thead th {
+    background-color: #f8fbfd;
+    padding: 15px;
+    border-bottom: 2px solid #eef2f5;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+table tbody td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+/* Status Pills */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background-color: #e8f5e9;
+    color: var(--success);
+}
+
+.status-inactive {
+    background-color: #ffebee;
+    color: var(--danger);
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    background-color: #f0f4f8;
+}
+
+.btn-delete:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+    background-color: #fff5f5;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #777;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.modal-close {
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    font-weight: 700;
+}
+
+.modal-form {
+    display: grid;
+    gap: 8px;
+}
+
+.modal-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-form input,
+.modal-form select {
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+.modal-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

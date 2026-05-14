@@ -1,0 +1,70 @@
+@import url("./usuario.css");
+
+.filters-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-input, .filter-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+}
+
+.search-input { flex: 1; }
+
+.btn-add {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Indicadores de Stock (Pills) */
+.stock-pill {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.in-stock { background: #e8f5e9; color: #2e7d32; }
+.low-stock { background: #fff3e0; color: #e65100; }
+.no-stock { background: #ffebee; color: #c62828; }
+
+.btn-edit {
+    background: none;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.btn-delete {
+    background: none;
+    border: 1px solid #c62828;
+    color: #c62828;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+
+.btn-delete:hover {
+    background: #c62828;
+    color: #fff;
+}

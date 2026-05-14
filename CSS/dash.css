@@ -101,6 +101,10 @@
     font-weight: 700;
 }
 
+.top-bar strong {
+    color: var(--text-main);
+}
+
 
 .stats-grid {
     display: grid;
@@ -204,6 +208,12 @@ table tbody tr:hover {
 table tbody td:first-child {
     font-weight: 700;
     color: var(--primary-dark);
+}
+
+#dashboardError,
+#inventoryMessage,
+#usersMessage {
+    font-weight: 600;
 }
 
 

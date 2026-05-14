@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - SmartFut</title>
+    <meta name="description" content="Crea tu cuenta en SmartFut y accede a los mejores implementos deportivos.">
+    <link rel="stylesheet" href="CSS/registrese.css">
+    <link rel="icon" type="image/x-icon" href="images/smarty.png">
+   
+</head>
+<body>
+    <div class="formulario">
+        <h1>Crear Cuenta</h1>
+        <form id="registerForm" novalidate>
+            <div class="username">
+                <input id="fullname" type="text" required>
+                <label for="fullname">Nombre completo</label>
+            </div>
+            
+            <div class="username">
+                <input id="email" type="email" required>
+                <label for="email">Correo electrónico</label>
+            </div>
+
+            <div class="contraseña">
+                <input id="pass" type="password" required>
+                <label for="pass">Contraseña</label>
+            </div>
+
+            <div class="contraseña">
+                <input id="confirm_pass" type="password" required>
+                <label for="confirm_pass">Confirmar contraseña</label>
+            </div>
+
+            <input type="submit" value="Registrarse">
+            <p id="registerMessage" style="margin-top:14px;"></p>
+            
+            <div class="registrese">
+                ¿Ya tienes una cuenta? <a href="registroSF.html">Inicia sesión</a>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="script/pages/register.js"></script>
+</body>
+</html>

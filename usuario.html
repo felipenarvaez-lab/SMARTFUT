@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMARTFUT - Gestión de Usuarios</title>
+    <link rel="stylesheet" href="CSS/usuario.css">
+    <link rel="icon" type="image/x-icon" href="images/smarty.png">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <aside class="sidebar">
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="inventario.html">Inventario</a>
+            <a href="usuario.html" class="active">Usuarios</a>
+            <a href="index.html">Volver a la Tienda</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="top-bar">
+            <h2>Gestión de Usuarios</h2>
+            <button id="openUserModalBtn" class="btn-add" type="button">+ Agregar Usuario</button>
+        </header>
+
+        <section class="data-table">
+            <h3>Lista de Usuarios - SMARTFUT</h3>
+            <p id="usersMessage" style="margin-bottom: 16px;"></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<div id="userModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="userModalTitle">Agregar usuario</h3>
+            <button id="closeUserModalBtn" class="modal-close" type="button">x</button>
+        </div>
+
+        <form id="userForm" class="modal-form">
+            <input type="hidden" id="userId">
+
+            <label for="userNombre">Nombre</label>
+            <input id="userNombre" type="text" required>
+
+            <label for="userCorreo">Correo</label>
+            <input id="userCorreo" type="email" required>
+
+            <label for="userEdad">Edad</label>
+            <input id="userEdad" type="number" min="1" required>
+
+            <label for="userRol">Rol</label>
+            <select id="userRol" required>
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+
+            <label for="userEstado">Estado</label>
+            <select id="userEstado" required>
+                <option value="true">Activo</option>
+                <option value="false">Inactivo</option>
+            </select>
+
+            <label for="userPassword">Contraseña (solo crear o cambiar)</label>
+            <input id="userPassword" type="password" minlength="3" placeholder="Opcional al editar">
+
+            <div class="modal-actions">
+                <button type="button" id="cancelUserModalBtn" class="btn-action">Cancelar</button>
+                <button type="submit" class="btn-add">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="script/pages/usuarios-page.js"></script>
+</body>
+</html>

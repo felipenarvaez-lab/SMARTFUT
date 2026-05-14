@@ -14,25 +14,24 @@
     
 </head>
 <body>
-    <header>
-        <i class="menu fa-solid fa-bars"></i>
-    </header>
     <div class="formulario">
         <h1>Inicio de sesión</h1>
-        <form method="post" action="index20.html">
+        <form id="loginForm" novalidate>
             <div class="username">
-                <input id="username" type="text" required>
-                <label for="username">Nombre del usuario</label>
+                <input id="correo" type="email" required>
+                <label for="correo">Correo electrónico</label>
             </div>
             <div class="contraseña">
-                <input type="password" required>
-                <label>Contraseña</label>
+                <input id="contrasena" type="password" required>
+                <label for="contrasena">Contraseña</label>
             </div>
             <div class="recordar">¿Olvidó su contraseña?</div>
-            <input type="submit" value="iniciar">
-            <div class="registrese">No tiene una cuenta? <a href="Cuenta.html">Regístrese</a></div>
+            <input type="submit" value="Iniciar sesión">
+            <p id="authMessage" style="margin-top:14px;"></p>
+            <div class="registrese">No tiene una cuenta? <a href="registrese.html">Regístrese</a></div>
         </form>
     </div>
+    <script type="module" src="script/pages/login.js"></script>
 </body>
 
 </html>
